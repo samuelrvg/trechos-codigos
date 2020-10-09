@@ -1,0 +1,10 @@
+
+private string DiaUtilDaSemanaMenosUm()
+{
+	var data = DateTime.Now.AddDays(-1);
+	if (data.DayOfWeek == DayOfWeek.Sunday)
+		data = data.AddDays(-2);
+	if (data.DayOfWeek == DayOfWeek.Saturday)
+		data = data.AddDays(-1);
+	return data.ToString("yyyyMMdd");
+}
